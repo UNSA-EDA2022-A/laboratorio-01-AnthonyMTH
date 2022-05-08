@@ -1,6 +1,6 @@
 package com.example.project;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class Exercise2 {
 
@@ -21,8 +21,33 @@ public class Exercise2 {
 	}
 
 	public Integer getMenorNumeroSaltos(int a []) {
-
-		// TO DO
-		return -1;
+		int numeroSaltos = 0;
+		int posicion = 0;
+		for(int i = 0; i < a.length; i++){
+		    if((a[i] - posicion <= 50) && (a[i] - posicion > 0)) {
+			for(int j = i+1; j < a.length; j++){
+			    if((a[j] - posicion > 50) && (a[j] - posicion > 0)) {
+				i = j-1;
+				posicion = a[j-1];
+				numeroSaltos++;
+				break;
+			    }
+			}
+			if((numeroSaltos == 0) && (a[a.length-1] - posicion <= 50) && (a[a.length-1] - posicion > 0)){
+			    numeroSaltos++;
+			    posicion = a[a.length-1];
+			}
+		    }
+		    else{
+			break;
+		    }
+		}
+		
+		if((numeroSaltos == 0) || (posicion != a[a.length-1])) {
+		    return -1;
+		}
+		else {
+		    return numeroSaltos;
+		}
 	}
 }
