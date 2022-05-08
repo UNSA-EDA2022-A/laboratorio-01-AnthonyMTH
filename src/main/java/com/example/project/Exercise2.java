@@ -15,7 +15,7 @@ public class Exercise2 {
                 int n = sc.nextInt();
                 a[i] = n;
             }
-			
+
 			System.out.println(obj.getMenorNumeroSaltos(a));			
 		}
 	}
@@ -33,21 +33,21 @@ public class Exercise2 {
 				break;
 			    }
 			}
-			if((numeroSaltos == 0) && (a[a.length-1] - posicion <= 50) && (a[a.length-1] - posicion > 0)){
-			    numeroSaltos++;
-			    posicion = a[a.length-1];
-			}
 		    }
 		    else{
 			break;
 		    }
 		}
-		
-		if((numeroSaltos == 0) || (posicion != a[a.length-1])) {
-		    return -1;
+		if((a[a.length-1] - posicion <= 50) && (a[a.length-1] - posicion > 0)){
+		    numeroSaltos++;
 		}
-		else {
+		if(numeroSaltos != 0) {
 		    return numeroSaltos;
 		}
+		else {
+		    return -1;
+		}
+		// TO DO
+		return -1;
 	}
-}
+} 
