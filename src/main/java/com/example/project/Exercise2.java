@@ -1,11 +1,11 @@
-
+package com.example.project;
 import java.util.*;
 
 public class Exercise2 {
 
 	public static void main(final String[] args) {
 		
-		Exercise1 obj = new Exercise1();
+		Exercise2 obj = new Exercise2();
 		Scanner sc = new Scanner(System.in);
 		while (true) {
 		    int a [] = new int [7];
