@@ -20,7 +20,7 @@ public class Exercise2 {
 		}
 	}
 
-	public static Integer getMenorNumeroSaltos(int a []) {
+	public Integer getMenorNumeroSaltos(int a []) {
 		int numeroSaltos = 0;
 		int posicion = 0;
 		for(int i = 0; i < a.length; i++){
